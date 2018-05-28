@@ -21,9 +21,15 @@
 	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 
+	<!-- 전역 변수 설정 (For문 용) -->
+	<?php
+		$i = 0;
+		$j = 1;
+	?>
+
 	<!-- 다면 평가 계산 스크립트 -->
 	<script>
-		var Sum = function() {
+		function Sum(number, obj, nextcol) {
 			var i, j;
 			var human_num = 11;	// 사람 수
 			var factor_num = 12;	// 평가 요소 수
@@ -78,6 +84,14 @@
 			for (i = 0; i < factor_num; i++)
 			{
 				document.getElementsByTagName("output")[i+1+human_num].value=factor_sum[i];
+			}
+
+			/* Input Focus 이동 */
+			var frm = document.all;
+			if (obj.value.length == number)
+			{
+				next_c = "frm." + nextcol + ".focus();"
+				eval(next_c);
 			}
 		}
 	</script>
@@ -151,182 +165,150 @@
 								</tr>
 								<tr>
 									<td>충성</td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
+									<!-- 
+									php 코드를 활용해서 echo해줌
+									i 하고 j는 전역 변수
+									-->
+									<?php
+									for (; $i < $j * 11; $i++) {
+									$n = 'n_'.($i+1);
+									$n2 = 'n_'.$i;
+									echo '<td><input type="tel" maxlength="1" onkeyup="javascript:Sum(1, this,\''.$n.'\' )" name="'.$n2.'" /></td>';
+									}
+									$j++;
+									?>
 									<td><output></output></td>
 								</tr>
 								<tr>
 									<td>책임</td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
+									<?php
+									for (; $i < $j * 11; $i++) {
+									$n = 'n_'.($i+1);
+									$n2 = 'n_'.$i;
+									echo '<td><input type="tel" maxlength="1" onkeyup="javascript:Sum(1, this,\''.$n.'\' )" name="'.$n2.'" /></td>';
+									}
+									$j++;
+									?>
 									<td><output></output></td>
 								</tr>
 								<tr>
 									<td>존중</td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
+									<?php
+									for (; $i < $j * 11; $i++) {
+									$n = 'n_'.($i+1);
+									$n2 = 'n_'.$i;
+									echo '<td><input type="tel" maxlength="1" onkeyup="javascript:Sum(1, this,\''.$n.'\' )" name="'.$n2.'" /></td>';
+									}
+									$j++;
+									?>
 									<td><output></output></td>
 								</tr>
 								<tr>
 									<td>창의</td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
+									<?php
+									for (; $i < $j * 11; $i++) {
+									$n = 'n_'.($i+1);
+									$n2 = 'n_'.$i;
+									echo '<td><input type="tel" maxlength="1" onkeyup="javascript:Sum(1, this,\''.$n.'\' )" name="'.$n2.'" /></td>';
+									}
+									$j++;
+									?>
 									<td><output></output></td>
 								</tr>
 								<tr>
 									<td>용기</td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
+									<?php
+									for (; $i < $j * 11; $i++) {
+									$n = 'n_'.($i+1);
+									$n2 = 'n_'.$i;
+									echo '<td><input type="tel" maxlength="1" onkeyup="javascript:Sum(1, this,\''.$n.'\' )" name="'.$n2.'" /></td>';
+									}
+									$j++;
+									?>
 									<td><output></output></td>
 								</tr>
 								<tr>
 									<td>공감</td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
+									<?php
+									for (; $i < $j * 11; $i++) {
+									$n = 'n_'.($i+1);
+									$n2 = 'n_'.$i;
+									echo '<td><input type="tel" maxlength="1" onkeyup="javascript:Sum(1, this,\''.$n.'\' )" name="'.$n2.'" /></td>';
+									}
+									$j++;
+									?>
 									<td><output></output></td>
 								</tr>
 								<tr>
 									<td>외적</td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
+									<?php
+									for (; $i < $j * 11; $i++) {
+									$n = 'n_'.($i+1);
+									$n2 = 'n_'.$i;
+									echo '<td><input type="tel" maxlength="1" onkeyup="javascript:Sum(1, this,\''.$n.'\' )" name="'.$n2.'" /></td>';
+									}
+									$j++;
+									?>
 									<td><output></output></td>
 								</tr>
 								<tr>
 									<td>준법</td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
+									<?php
+									for (; $i < $j * 11; $i++) {
+									$n = 'n_'.($i+1);
+									$n2 = 'n_'.$i;
+									echo '<td><input type="tel" maxlength="1" onkeyup="javascript:Sum(1, this,\''.$n.'\' )" name="'.$n2.'" /></td>';
+									}
+									$j++;
+									?>
 									<td><output></output></td>
 								</tr>
 								<tr>
 									<td>협동</td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
+									<?php
+									for (; $i < $j * 11; $i++) {
+									$n = 'n_'.($i+1);
+									$n2 = 'n_'.$i;
+									echo '<td><input type="tel" maxlength="1" onkeyup="javascript:Sum(1, this,\''.$n.'\' )" name="'.$n2.'" /></td>';
+									}
+									$j++;
+									?>
 									<td><output></output></td>
 								</tr>
 								<tr>
 									<td>정직</td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
+									<?php
+									for (; $i < $j * 11; $i++) {
+									$n = 'n_'.($i+1);
+									$n2 = 'n_'.$i;
+									echo '<td><input type="tel" maxlength="1" onkeyup="javascript:Sum(1, this,\''.$n.'\' )" name="'.$n2.'" /></td>';
+									}
+									$j++;
+									?>
 									<td><output></output></td>
 								</tr>
 								<tr>
 									<td>명예</td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
+									<?php
+									for (; $i < $j * 11; $i++) {
+									$n = 'n_'.($i+1);
+									$n2 = 'n_'.$i;
+									echo '<td><input type="tel" maxlength="1" onkeyup="javascript:Sum(1, this,\''.$n.'\' )" name="'.$n2.'" /></td>';
+									}
+									$j++;
+									?>
 									<td><output></output></td>
 								</tr>
 								<tr>
 									<td>리더</td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
-									<td><input type="tel" onkeyup="javascript:Sum()" maxlength="1" /></td>
+									<?php
+									for (; $i < $j * 11; $i++) {
+									$n = 'n_'.($i+1);
+									$n2 = 'n_'.$i;
+									echo '<td><input type="tel" maxlength="1" onkeyup="javascript:Sum(1, this,\''.$n.'\' )" name="'.$n2.'" /></td>';
+									}
+									$j++;
+									?>
 									<td><output></output></td>
 								</tr>
 							</tbody>
