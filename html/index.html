@@ -25,6 +25,7 @@
 	<?php
 		$i = 0;
 		$j = 1;
+		$k = 1;
 	?>
 
 	<!-- 다면 평가 계산 스크립트 -->
@@ -171,7 +172,7 @@
 									-->
 									<?php
 									for (; $i < $j * 11; $i++) {
-									$n = 'n_'.($i+1);
+									$n = 'n_'.($i+11);
 									$n2 = 'n_'.$i;
 									echo '<td><input type="tel" maxlength="1" onkeyup="javascript:Sum(1, this,\''.$n.'\' )" name="'.$n2.'" /></td>';
 									}
@@ -183,7 +184,7 @@
 									<td>책임</td>
 									<?php
 									for (; $i < $j * 11; $i++) {
-									$n = 'n_'.($i+1);
+									$n = 'n_'.($i+11);
 									$n2 = 'n_'.$i;
 									echo '<td><input type="tel" maxlength="1" onkeyup="javascript:Sum(1, this,\''.$n.'\' )" name="'.$n2.'" /></td>';
 									}
@@ -195,7 +196,7 @@
 									<td>존중</td>
 									<?php
 									for (; $i < $j * 11; $i++) {
-									$n = 'n_'.($i+1);
+									$n = 'n_'.($i+11);
 									$n2 = 'n_'.$i;
 									echo '<td><input type="tel" maxlength="1" onkeyup="javascript:Sum(1, this,\''.$n.'\' )" name="'.$n2.'" /></td>';
 									}
@@ -207,7 +208,7 @@
 									<td>창의</td>
 									<?php
 									for (; $i < $j * 11; $i++) {
-									$n = 'n_'.($i+1);
+									$n = 'n_'.($i+11);
 									$n2 = 'n_'.$i;
 									echo '<td><input type="tel" maxlength="1" onkeyup="javascript:Sum(1, this,\''.$n.'\' )" name="'.$n2.'" /></td>';
 									}
@@ -219,7 +220,7 @@
 									<td>용기</td>
 									<?php
 									for (; $i < $j * 11; $i++) {
-									$n = 'n_'.($i+1);
+									$n = 'n_'.($i+11);
 									$n2 = 'n_'.$i;
 									echo '<td><input type="tel" maxlength="1" onkeyup="javascript:Sum(1, this,\''.$n.'\' )" name="'.$n2.'" /></td>';
 									}
@@ -231,7 +232,7 @@
 									<td>공감</td>
 									<?php
 									for (; $i < $j * 11; $i++) {
-									$n = 'n_'.($i+1);
+									$n = 'n_'.($i+11);
 									$n2 = 'n_'.$i;
 									echo '<td><input type="tel" maxlength="1" onkeyup="javascript:Sum(1, this,\''.$n.'\' )" name="'.$n2.'" /></td>';
 									}
@@ -243,7 +244,7 @@
 									<td>외적</td>
 									<?php
 									for (; $i < $j * 11; $i++) {
-									$n = 'n_'.($i+1);
+									$n = 'n_'.($i+11);
 									$n2 = 'n_'.$i;
 									echo '<td><input type="tel" maxlength="1" onkeyup="javascript:Sum(1, this,\''.$n.'\' )" name="'.$n2.'" /></td>';
 									}
@@ -255,7 +256,7 @@
 									<td>준법</td>
 									<?php
 									for (; $i < $j * 11; $i++) {
-									$n = 'n_'.($i+1);
+									$n = 'n_'.($i+11);
 									$n2 = 'n_'.$i;
 									echo '<td><input type="tel" maxlength="1" onkeyup="javascript:Sum(1, this,\''.$n.'\' )" name="'.$n2.'" /></td>';
 									}
@@ -267,7 +268,7 @@
 									<td>협동</td>
 									<?php
 									for (; $i < $j * 11; $i++) {
-									$n = 'n_'.($i+1);
+									$n = 'n_'.($i+11);
 									$n2 = 'n_'.$i;
 									echo '<td><input type="tel" maxlength="1" onkeyup="javascript:Sum(1, this,\''.$n.'\' )" name="'.$n2.'" /></td>';
 									}
@@ -279,7 +280,7 @@
 									<td>정직</td>
 									<?php
 									for (; $i < $j * 11; $i++) {
-									$n = 'n_'.($i+1);
+									$n = 'n_'.($i+11);
 									$n2 = 'n_'.$i;
 									echo '<td><input type="tel" maxlength="1" onkeyup="javascript:Sum(1, this,\''.$n.'\' )" name="'.$n2.'" /></td>';
 									}
@@ -291,7 +292,7 @@
 									<td>명예</td>
 									<?php
 									for (; $i < $j * 11; $i++) {
-									$n = 'n_'.($i+1);
+									$n = 'n_'.($i+11);
 									$n2 = 'n_'.$i;
 									echo '<td><input type="tel" maxlength="1" onkeyup="javascript:Sum(1, this,\''.$n.'\' )" name="'.$n2.'" /></td>';
 									}
@@ -303,8 +304,9 @@
 									<td>리더</td>
 									<?php
 									for (; $i < $j * 11; $i++) {
-									$n = 'n_'.($i+1);
+									$n = 'n_'.$k;
 									$n2 = 'n_'.$i;
+									$k++;
 									echo '<td><input type="tel" maxlength="1" onkeyup="javascript:Sum(1, this,\''.$n.'\' )" name="'.$n2.'" /></td>';
 									}
 									$j++;
