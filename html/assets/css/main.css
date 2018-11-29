@@ -2718,8 +2718,8 @@
 			}
 		
 		/* table input 추가 */
-		input {
-			width: 15px
+		input[type="tel"] {
+			width: 15px;
 		}
 
 /* Button */
