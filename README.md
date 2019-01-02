@@ -26,7 +26,7 @@
   * Git
 
 - URL
- * http://rotc202.dothome.co.kr/
+  * http://rotc202.dothome.co.kr/
 
 - Manual
- * ![Manual](https://github.com/HyunIm/ROTC/blob/master/Doc/Manual/Manual.png)
+  * ![Manual](https://github.com/HyunIm/ROTC/blob/master/Doc/Manual/Manual.png)
